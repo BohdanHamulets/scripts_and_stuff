@@ -1,6 +1,6 @@
 # My shell scripts 
 
-Not all of them are for bash, some are for csh,
+Not all of them are for bash, some are for csh(FreeBSD),
 minor changes may be required to run on your environment.
 
 
