@@ -10,13 +10,13 @@
 
 sudo apt-get update
 
-yes | sudo apt-get install tmux htop netcat nmap curl
+yes | sudo apt-get install tmux htop netcat nmap vim curl
 
 yes | sudo apt-get install silversearcher-ag  chromium-chromedriver firefox
 
 yes | sudo apt-get install python3-selenium ipython3 python3 python3-pip
 
-yes | sudo apt-get install git openssl tcpdump
+yes | sudo apt-get install git openssl openssh-server tcpdump
 
 yes | sudo apt-get autoclean
 
