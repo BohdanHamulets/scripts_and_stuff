@@ -1,0 +1,13 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+
+auto lo
+iface lo inet loopback
+# added by Bohdan
+
+allow-hotplug ens18
+iface ens18 inet static
+	address 
+	gateway 104.250.132.65
+	# dns options are implemented by the resolvconf pacage, if installed
+	dns-nameservers 8.8.8.8
+
