@@ -1,3 +1,9 @@
+# This is how in Ubuntu 16_04 LTS corretly configured interface should look like, /etc/network/interfaces
+
+
+
+
+
 # interfaces(5) file used by ifup(8) and ifdown(8)
 
 auto lo
