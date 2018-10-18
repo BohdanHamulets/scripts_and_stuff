@@ -1,9 +1,5 @@
 # This is how in Ubuntu 16_04 LTS corretly configured interface should look like, /etc/network/interfaces
 
-
-
-
-
 # interfaces(5) file used by ifup(8) and ifdown(8)
 
 auto lo
@@ -16,4 +12,3 @@ iface ens18 inet static
 	gateway 104.250.132.65
 	# dns options are implemented by the resolvconf pacage, if installed
 	dns-nameservers 8.8.8.8
-
