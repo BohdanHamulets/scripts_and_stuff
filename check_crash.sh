@@ -21,11 +21,9 @@ cat /tmp/logfiles.list|xargs fgrep -iwc -e "Critical"|grep -v "0"
 echo -e "\nFollowing files  have the pattern - Warning"
 cat /tmp/logfiles.list|xargs fgrep -iwc -e "Warning"|grep -v "0"
 
-
 echo -e "\nFollowing files  have the pattern - Application Fault"
 cat /tmp/logfiles.list|xargs fgrep -iwc   -e "application fault"|grep -v "0"
 cat /tmp/logfiles.list|xargs fgrep -iwc   -e "appfault"|grep -v "0"
-
 
 echo -e "\nFollowing files  have the pattern - Traceback"
 cat /tmp/logfiles.list|xargs fgrep -iwc   -e "Traceback"|grep -v "0"
@@ -39,6 +37,3 @@ echo -e "\n"
 rm -rf /tmp/logfiles.list
 
 exit
-
-
-
