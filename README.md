@@ -14,10 +14,10 @@ Greps defined log files (change path to your's) to find if any serious stuff too
 Monitores info of chosen service/demon memory usage and state every X $time, and saves it to the log file. 
 
 # grep4errorSTORE.sh
-Used during hard bug repro to investigate a specific action needed to break functionality and EXACT time
+Used during hard bug repro to investigate a specific action needed to break functionality and EXACT time.
 
 # repeater.sh
-Runs given commands over and over again
+Runs given commands over and over again.
 
 # restarter.sh
-Brings up and down given service/demon for testing or debug purposes
+Brings up and down given service/demon for testing or debug purposes.
