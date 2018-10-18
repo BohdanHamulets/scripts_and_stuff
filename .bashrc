@@ -15,3 +15,6 @@ alias show='grep alias $HOME/.bash_profile | grep -v "grep"'
 # 2) Alias to quickly connect to your remote server, configured securly, via ssh key login only:
 
 alias centosAS='ssh -i <path_to_private_key> <username>@<hostname>'
+
+# Just colored bash prompt
+export PS1="\[\e[33m\]\\$\[\e[m\]\[\e[33m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[33m\]\h\[\e[m\] \[\e[33m\]\W\[\e[m\]\[\e[33m\] \[\e[m\]\[\e[33m\]\A\[\e[m\]\[\e[33m\]:\[\e[m\] "
