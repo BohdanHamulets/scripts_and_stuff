@@ -1,0 +1,6 @@
+spy on logged in unix users:
+
+apt install sysdig
+
+
+# sysdig -c spy_users (can also write to file)
