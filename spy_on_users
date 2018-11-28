@@ -3,4 +3,18 @@ spy on logged in unix users:
 apt install sysdig
 
 
-# sysdig -c spy_users (can also write to file)
+# sysdig -c spy_users > log.file
+
+
+Better to run this in "screen"
+
+To exit screen - CTRL + A + D 
+
+screen -ls
+
+screen -r <with output from previous ls>
+
+then exit sysdig (CTRL + C)
+
+and now you can read this file
+
