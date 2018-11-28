@@ -1,0 +1,53 @@
+cd /etc/systemd/system
+
+here is the script's which are executed after system startup
+
+let's look for ssh as example
+
+cat # cat sshd.service
+
+[Unit]
+Description=OpenBSD Secure Shell server
+After=network.target auditd.service
+ConditionPathExists=!/etc/ssh/sshd_not_to_be_run
+
+[Service]
+EnvironmentFile=-/etc/default/ssh
+ExecStartPre=/usr/sbin/sshd -t
+ExecStart=/usr/sbin/sshd -D $SSHD_OPTS
+ExecReload=/usr/sbin/sshd -t
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+RestartPreventExitStatus=255
+Type=notify
+
+[Install]
+WantedBy=multi-user.target
+Alias=sshd.service
+
+
+
+#TODO: 
+
+Let's write our own:
+
+locale-set.service
+
+[Unit]
+Description=Kostul for locale settings
+After=network.target auditd.service
+
+
+
+[Service]
+ExecStart=export LC_CTYPE="en_US.UTF-8"
+ExecStart=export LC_ALL="en_US.UTF-8"
+ExecStart=export LANG="en_US.UTF-8"
+ExecStart=export LANGUAGE="en_US.UTF-8"
+
+Type=notify
+
+[Install]
+Alias=locale-set.service
+
