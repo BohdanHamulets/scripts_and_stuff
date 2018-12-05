@@ -18,3 +18,27 @@ then exit sysdig (CTRL + C)
 
 and now you can read this file
 
+can also be used as this:
+
+# nohup sysdig -c spy_users > spy.file &
+[1] 20043
+root@qa-03:~# nohup: ignoring input and redirecting stderr to stdout
+root@qa-03:~#
+root@qa-03:~# ps aux |grep 20043
+root     20043  0.8  0.5 153288 10980 pts/1    S    15:10   0:00 sysdig -c spy_users
+root     20052  0.0  0.0  12916   924 pts/1    S+   15:10   0:00 grep --color=auto 20043
+root@qa-03:~#
+root@qa-03:~# kill -15 20043
+root@qa-03:~#
+[1]+  Done                    nohup sysdig -c spy_users > spy.file
+root@qa-03:~#
+root@qa-03:~#
+root@qa-03:~# cat spy.file
+17767 15:10:44 root) ps aux
+17767 15:10:44 root) grep --color=auto 20043
+17480 15:10:49 root) date
+   17480 15:10:52 root) /usr/bin/python3 /usr/lib/command-not-found -- data
+17480 15:10:53 root) w
+
+
+
