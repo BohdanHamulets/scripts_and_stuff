@@ -16,8 +16,5 @@ Monitores info of chosen service/demon memory usage and state every X $time, and
 # grep4errorSTORE.sh
 Used during hard bug repro to investigate a specific action needed to break functionality and EXACT time
 
-# repeater.sh
-Runs given commands over and over again
-
 # restarter.sh
 Brings up and down given service/demon for testing or debug purposes
