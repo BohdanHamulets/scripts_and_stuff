@@ -3,7 +3,8 @@
 
 # Add this to your bashrc to view history of commands run along with their timestamp
 
-export HISTTIMEFORMAT="%d/%m/%y %T " 
+export HISTTIMEFORMAT="%d/%m/%y %T "
+export PROMPT_COMMAND="echo -n \[\$(date +%H:%M:%S)\]\ "
 
 # Aliases for accessing remote machines
 
